@@ -43,7 +43,7 @@ Para qué queremos una computadora/ordenador/servidor: Ejecutar software ---> Da
 Un entorno aislado dentro de un SO que corra un kernel Linux en el que ejecutamos procesos.
 
 Entorno aislado:
-- Su propia configuración de red
+- Su propia configuración de red -> Su propia IP
 - Sus propias variables de entorno
 - Su propio sistema de archivos
 - Limitación de acceso al hardware
