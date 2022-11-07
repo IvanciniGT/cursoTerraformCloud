@@ -12,7 +12,9 @@ provider "docker" {
 resource "docker_container"     "mi_contenedor" {
     name  = "mimariadb"
     image = docker_image.mi_imagen.image_id  
-    start = true
+    # Esto funcionaria por los pelos... gracias a la autoconversiónd e tipos de terraform
+    # start = "${var.arranque_automatico_contenedor}"
+    start = var.arranque_automatico_contenedor
     ports {
         internal = 3306
         external = 33306
@@ -21,12 +23,7 @@ resource "docker_container"     "mi_contenedor" {
         container_path = "/var/lib/mysql"
         host_path      = "/home/ubuntu/datos/mariadb"
     }
-    env = [
-        "MARIADB_ROOT_PASSWORD=password",
-        "MARIADB_DATABASE=midb",
-        "MARIADB_USER=usuario",
-        "MARIADB_PASSWORD=password"
-        ]
+    env = var.variables_entorno
 }
 
 resource "docker_image" "mi_imagen" {

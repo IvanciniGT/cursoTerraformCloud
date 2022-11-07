@@ -121,3 +121,11 @@ NOTA 4: También se puede ( Y si Iván os ve hacerlo, os corta las uñas muy muy
         dónde van a estar guardados estos ficheros? (nuestro script de terraform) En un Sistema de control de versión.
     SUBNOTA 1: Hay algún escenario en el que este comportamiento sea DESEADO? 
                 Precisamente cuando no quiero trazabilidad! Por ejemplo: Contraseña!
+                
+                
+# SET vs LIST como tipos de variables
+
+Una variable definida como LIST, garantiza que se mantendrá el ORDEN
+    en el que se suministran los elementos
+Una variable definida como SET,  NO garantiza que se mantendrá el ORDEN 
+    en el que se suministran los elementos
