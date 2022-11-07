@@ -129,3 +129,16 @@ Una variable definida como LIST, garantiza que se mantendrá el ORDEN
     en el que se suministran los elementos
 Una variable definida como SET,  NO garantiza que se mantendrá el ORDEN 
     en el que se suministran los elementos
+
+Qué estamos haciendo? Desde el día 1?
+Automatizar... = HACER UN PROGRAMA !
+Me acabo de convertir en un programador!
+
+Quién va a usar este programa que YO estoy haciendo?
+NPI
+
+Necesito que la información de cópmo funciona el programa fluya!
+Tengo 2 opciones: 
+- Hacerla (la explicación de cómo funciona este programa) explicita
+- Escribir un montón de aburrida DOCUMENTACION que en seguida se 
+    queda obsoleta y nadie lee!

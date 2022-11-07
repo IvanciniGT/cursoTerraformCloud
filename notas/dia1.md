@@ -238,6 +238,7 @@ DATA
 VARIABLE
 OUTPUT
 PROVISIONER
+MODULE !
 
 Terraform es un lenguaje MODULAR.
 Tenemos disponible muchos PROVIDERS.... Incluso podemos crear nuestros propios providers.
