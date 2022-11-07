@@ -59,10 +59,10 @@ resource "docker_container"     "mi_contenedor" {
         internal = 3306
         external = 33306
     }
-    #ports {
-    #    internal = 80
-    #    external = 8080
-    #}
+    ports {
+        internal = 80
+        external = 8080
+    }
     #ports {
     #    internal = 443
     #    external = 8443
