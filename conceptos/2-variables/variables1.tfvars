@@ -34,3 +34,6 @@ variables_entorno        = [
                                         valor  = "password"
                                 },
                            ]
+                           
+cuota_cpu               = 1024
+                           

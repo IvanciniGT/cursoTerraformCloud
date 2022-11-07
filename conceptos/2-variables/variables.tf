@@ -14,6 +14,12 @@ variable "arranque_automatico_contenedor" {
     description = "Indica si el contenedor debe arrancar en automático"
     type = bool
 }
+variable "cuota_cpu" { 
+    description = "Tiempo de CPU que puede usar el contenedopr"
+    type = number
+    default = null # No es lo mismo que no asignar valor
+    nullable = true # Este es el valor por defecto
+}
 
 variable "variables_entorno" { 
     description = "Variables de entorno para configurar el contenedor"

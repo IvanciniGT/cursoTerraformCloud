@@ -14,6 +14,10 @@ resource "docker_container"     "mi_contenedor" {
     image = docker_image.mi_imagen.image_id  
     # Esto funcionaria por los pelos... gracias a la autoconversiónd e tipos de terraform
     # start = "${var.arranque_automatico_contenedor}"
+    
+    cpu_shares = var.cuota_cpu
+                 # Si a una propiedad le asigno null, para terraform, 
+                 # es como si no hubiera escrito esta linea.
     start = var.arranque_automatico_contenedor
     #ports {
         #internal = var.puertos[0]
@@ -37,7 +41,7 @@ resource "docker_container"     "mi_contenedor" {
         host_path      = "/home/ubuntu/datos/mariadb"
     }
     
-    env = [ for variable in var.variables_entorno: "${variable.nombre}=${variable.valor}" ]
+    env = [ for variable_entorno in var.variables_entorno: "${variable_entorno.nombre}=${variable_entorno.valor}" ]
 }
 
 resource "docker_image" "mi_imagen" {

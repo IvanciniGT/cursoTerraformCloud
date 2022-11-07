@@ -142,3 +142,14 @@ Tengo 2 opciones:
 - Hacerla (la explicación de cómo funciona este programa) explicita
 - Escribir un montón de aburrida DOCUMENTACION que en seguida se 
     queda obsoleta y nadie lee!
+
+
+CPU_Shares in Containers: Se usa como base el valor 1024... = 100% de uso de 1 core
+
+Si yo a un contenedor le asigno un CPU_Share de 1024, que significa eso? Puede usar un core al 100%
+Si yo a un contenedor le asigno un CPU_Share de 2048, que significa eso? Puede usar dos cores al 100%
+3 cores: 
+        100%
+        50%
+        50%
+
