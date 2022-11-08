@@ -93,3 +93,25 @@ Entre el 0 y el 100
 
 Email
 letras @ masletras . extension
+
+-------
+# Generación de múltiples recursos
+
+
+
+
+
+
+# Al crear 1 antes:
+
+docker_image.mi_imagen: Creating...
+docker_image.mi_imagen: Creation complete after 7s [id=sha256:76c69feac34e85768b284f84416c3546b240e8cb4f68acbbe5ad261a8b36f39fnginx:latest]
+docker_container.mi_contenedor: Creating...
+docker_container.mi_contenedor: Creation complete after 1s [id=5edc132ed49c080926e8b02c035b34961adec070aa9f10c68a1d6b1ab189f719]
+
+Al crear 1 ahora:
+
+docker_image.mi_imagen: Creating...
+docker_image.mi_imagen: Creation complete after 7s [id=sha256:76c69feac34e85768b284f84416c3546b240e8cb4f68acbbe5ad261a8b36f39fnginx:latest]
+docker_container.mi_contenedor[0]: Creating...
+docker_container.mi_contenedor[0]: Creation complete after 1s [id=115c91ea18197c4f53bb90d064957c1f1e4773c9d088acc8394511eaac82b23c]
