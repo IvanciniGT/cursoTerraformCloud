@@ -3,6 +3,8 @@ puertos_expuestos       =  [
                                 {
                                         interno = 3306
                                         externo = 33306
+                                        protocolo = "tcp"
+                                        ip = "0.0.0.0"
                                 },
                                 {
                                         interno = 80
