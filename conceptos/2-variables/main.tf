@@ -33,6 +33,7 @@ resource "docker_container"     "mi_contenedor" {
         content {
             internal = puerto_expuesto.value["interno"]
             external = puerto_expuesto.value["externo"]
+            protocol = puerto_expuesto.value["protocolo"]
         }
     }
     

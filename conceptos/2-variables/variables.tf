@@ -57,10 +57,13 @@ variable "puertos_expuestos" {
     type = set(object({
                         interno = number
                         externo = number
+                        protocolo = optional(string,"tcp")
+                        ip = optional(string,"0.0.0.0")
                     })
                 )
     nullable = false
     default  = []
+    
     validation {
         condition     = alltrue(
                             [ for puerto in var.puertos_expuestos: 
@@ -68,6 +71,7 @@ variable "puertos_expuestos" {
                         )
         error_message = "El valor suministrado para el puerto interno debe estar entre el 1 y el 40000."
     }
+    
     validation {
         condition     = alltrue(
                             [ for puerto in var.puertos_expuestos: 
@@ -75,6 +79,30 @@ variable "puertos_expuestos" {
                         )
         error_message = "El valor suministrado para el puerto externo debe estar entre el 1 y el 40000."
     }
+    
+    validation {
+        condition     = alltrue(
+                            [ for puerto in var.puertos_expuestos: 
+                                contains( ["tcp","udp"], puerto.protocolo )
+                            ]
+                        )
+        error_message = "El valor suministrado para el protocolo debe ser tcp o udp."
+    }
+    validation {
+        condition     = alltrue(
+                            [ for puerto in var.puertos_expuestos: 
+                                length(
+                                    regexall( 
+                                        "^([01]?\\d\\d?|2[0-4]\\d|25[0-5])(?:\\.(?:[01]?\\d\\d?|2[0-4]\\d|25[0-5])){3}(?:[0-2]\\d|3[0-2])?$", 
+                                        puerto.ip 
+                                    )
+                                ) == 1
+                            ]
+                        )
+        error_message = "El valor suministrado para la ip debe ser válido."
+    }
+    # 
+
 }
 
 

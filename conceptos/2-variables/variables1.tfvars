@@ -3,12 +3,13 @@ puertos_expuestos       =  [
                                 {
                                         interno = 3306
                                         externo = 33306
-                                        protocolo = "tcp"
-                                        ip = "0.0.0.0"
+                                        protocolo = "udp"   # tcp | udp    # contains
+                                        ip = "0.0.0.0" # expresiones regulares!
                                 },
                                 {
                                         interno = 80
                                         externo = 8080
+                                        protocolo = "tcp"   # tcp | udp    # contains
                                 } 
                            ]
 #variables_entorno       = [
