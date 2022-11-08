@@ -41,6 +41,7 @@ resource "docker_container"     "mi_contenedor" {
         host_path      = "/home/ubuntu/datos/mariadb"
     }
     
+    #env = var.variables_entorno
     env = [ for variable_entorno in var.variables_entorno: "${variable_entorno.nombre}=${variable_entorno.valor}" ]
 }
 
