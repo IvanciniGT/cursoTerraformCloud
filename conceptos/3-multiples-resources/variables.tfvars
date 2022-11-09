@@ -26,7 +26,12 @@ lista_de_contenedores= [
     },
     {
         nombre              = "contenedorL2"
-        puerto_externo      = 8088
+        puerto_externo      = 9099
+        arranque_automatico = true
+    },
+    {
+        nombre              = "contenedorL3"
+        puerto_externo      = 8089
         arranque_automatico = true
     }
 ]

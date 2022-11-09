@@ -6,8 +6,7 @@ terraform {
   }
 }
 
-provider "docker" {
-}
+provider "docker" { }
 
 resource "docker_container"     "mi_contenedor" {
     name  = "mimariadb"
