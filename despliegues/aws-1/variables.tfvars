@@ -1,0 +1,6 @@
+region = "eu-west-1"
+nombre_imagen ="*ubuntu-xenial-16.04-amd64-server-*"
+virtualizacion_imagen = "hvm"
+propietario_imagen = "099720109477"
+nombre_servidor = "ServidorDeIvan"
+tipo_de_servidor = "t2.micro"
