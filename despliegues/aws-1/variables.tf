@@ -77,3 +77,14 @@ variable "tipo_de_servidor" {
         error_message = "El valor suministrado para el tipo de servidor no es válido."
     }
 }
+
+variable "nombre_claves_aws" { 
+    description = "Nombre de las claves en AMAZON"
+    type = string
+    nullable = false
+}
+variable "nombre_security_group" { 
+    description = "Nombre del security group en AMAZON"
+    type = string
+    nullable = false
+}
